@@ -85,7 +85,9 @@ input[type=text]:disabled{opacity:1}
 .q{font-family:var(--font-h);font-size:1.25rem;font-weight:700;margin:8px 0 12px}
 .a{font-size:1.04rem;background:color-mix(in srgb,var(--stone) 22%,var(--surface));border-radius:10px;padding:12px 14px;min-height:3em}
 .a.hidden{color:transparent;background:repeating-linear-gradient(45deg,var(--chip) 0 10px,transparent 10px 20px);user-select:none}
-.a b{color:var(--deep)}
+.a:not(.hidden) b{color:var(--deep)}
+.a.hidden *{color:transparent !important}
+.a.hidden a{pointer-events:none}
 .wb{font-family:var(--font-h);font-size:1.4rem;font-weight:800;text-align:center;margin:14px 0}
 .wb span{color:var(--rust)}
 footer{color:var(--muted);font-size:.85rem;padding:6px 0 30px}
